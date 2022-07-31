@@ -1,0 +1,42 @@
+@use "../SASS/variables" as *;
+@use "../SASS/mixins" as *;
+
+.head {
+  @include flex(space-between, center);
+  .calc {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .themeBox {
+    position: relative;
+    height: 22px;
+    width: 50px;
+    border-radius: 20px;
+    &::after {
+      position: absolute;
+      content: "Theme";
+      top: 50%;
+      left: -110%;
+      transform: translateY(-50%);
+      font-size: 14px;
+    }
+    .ball {
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .numbers {
+      @include flex(space-around, center);
+      position: absolute;
+      width: 100%;
+      bottom: 110%;
+      font-size: 12px;
+    }
+  }
+}

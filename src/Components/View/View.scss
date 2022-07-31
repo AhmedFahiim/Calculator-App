@@ -1,0 +1,23 @@
+@use "../SASS/variables" as *;
+@use "../SASS/mixins" as *;
+
+.view {
+  @include flex(space-between, flex-end);
+  flex-direction: column;
+  height: 110px;
+  width: 100%;
+  background-color: $first-screen-background;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  .opperand {
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+  .final {
+    color: #fff;
+    font-size: 30px;
+  }
+}

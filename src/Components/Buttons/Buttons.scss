@@ -1,0 +1,29 @@
+@use "../SASS/variables" as *;
+@use "../SASS/mixins" as *;
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  border-radius: 8px;
+  padding: 15px 20px;
+  button {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    &.equel,
+    &.reset {
+      grid-column: span 2;
+    }
+    &.del,
+    &.reset {
+      letter-spacing: 1px;
+    }
+  }
+}

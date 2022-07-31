@@ -1,0 +1,167 @@
+@use "./Components/SASS/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  &.first {
+    background-color: $first-main-background;
+    .head {
+      .calc {
+        color: #fff;
+      }
+      .themeBox {
+        background-color: $first-toggle-background;
+        &::after {
+          color: #fff;
+        }
+        .ball {
+          background-color: $first-equel-toggle;
+        }
+        .numbers {
+          color: #fff;
+        }
+      }
+    }
+    .view {
+      background-color: $first-screen-background;
+      .opperand,
+      .final {
+        color: #fff;
+      }
+    }
+    .buttons {
+      background-color: $first-toggle-background;
+      button {
+        background-color: $first-key-background;
+        color: $first-Very-dark-grayish-blue;
+        &:hover {
+          background-color: #fff;
+        }
+        &.del,
+        &.reset,
+        &.equel {
+          color: #fff;
+        }
+        &.del,
+        &.reset {
+          background-color: $first-delete-reset;
+        }
+        &.equel {
+          background-color: $first-equel-toggle;
+        }
+      }
+    }
+  }
+  &.second {
+    background-color: $second-main-background;
+    .head {
+      .calc {
+        color: $second-Very-dark-grayish-blue;
+      }
+      .themeBox {
+        background-color: $second-toggle-background;
+        &::after {
+          color: $second-Very-dark-grayish-blue;
+        }
+        .ball {
+          background-color: $second-equel-toggle;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .numbers {
+          color: $second-Very-dark-grayish-blue;
+        }
+      }
+    }
+    .view {
+      background-color: $second-screen-background;
+      .opperand,
+      .final {
+        color: $second-Very-dark-grayish-blue;
+      }
+    }
+    .buttons {
+      background-color: $second-toggle-background;
+      button {
+        background-color: $second-key-background;
+        color: $second-Very-dark-grayish-blue;
+        &:hover {
+          background-color: #fff;
+        }
+        &.del,
+        &.reset,
+        &.equel {
+          color: #fff;
+        }
+        &.del,
+        &.reset {
+          background-color: $second-delete-reset;
+        }
+        &.equel {
+          background-color: $second-equel-toggle;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.third {
+    background-color: $third-main-background;
+    .head {
+      .calc {
+        color: $third-light-yellow;
+      }
+      .themeBox {
+        background-color: $third-toggle-key-screen-background;
+        &::after {
+          color: $third-light-yellow;
+        }
+        .ball {
+          background-color: $third-equel-toggle;
+          left: calc(100% - 10px);
+          transform: translate(-50%, -50%);
+        }
+        .numbers {
+          color: $third-light-yellow;
+        }
+      }
+    }
+    .view {
+      background-color: $third-toggle-key-screen-background;
+      .opperand,
+      .final {
+        color: $third-light-yellow;
+      }
+    }
+    .buttons {
+      background-color: $third-toggle-key-screen-background;
+      button {
+        background-color: $third-key-background;
+        color: $third-light-yellow;
+        &:hover {
+          opacity: 0.7;
+          background-color: $third-key-background;
+        }
+        &.del,
+        &.reset,
+        &.equel {
+          color: #fff;
+        }
+        &.del,
+        &.reset {
+          background-color: $third-delete-reset;
+        }
+        &.equel {
+          background-color: $third-equel-toggle;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
