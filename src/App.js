@@ -59,20 +59,18 @@ const reduceFun = (state, { type, value }) => {
 };
 
 function Calculator({ current, prev, operation }) {
-  let result = 0;
   let currentEle = parseInt(current);
   let prevEle = parseInt(prev);
 
   if (operation === "+") {
-    result = prevEle + currentEle;
+    return prevEle + currentEle;
   } else if (operation === "-") {
-    result = prevEle - currentEle;
+    return prevEle - currentEle;
   } else if (operation === "X") {
-    result = prevEle * currentEle;
+    return prevEle * currentEle;
   } else if (operation === "/") {
-    result = prevEle / currentEle;
+    return prevEle / currentEle;
   }
-  return result.toString();
 }
 
 function App() {
