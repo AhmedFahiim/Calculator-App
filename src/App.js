@@ -64,13 +64,13 @@ function Calculator({ current, prev, operation }) {
   let prevEle = parseInt(prev);
 
   if (operation === "+") {
-    result = currentEle + prevEle;
+    result = prevEle + currentEle;
   } else if (operation === "-") {
-    result = currentEle - prevEle;
+    result = prevEle - currentEle;
   } else if (operation === "X") {
-    result = currentEle * prevEle;
+    result = prevEle * currentEle;
   } else if (operation === "/") {
-    result = currentEle / prevEle;
+    result = prevEle / currentEle;
   }
   return result.toString();
 }
