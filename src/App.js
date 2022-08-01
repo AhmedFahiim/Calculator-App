@@ -14,8 +14,7 @@ const reduceFun = (state, { type, value }) => {
       } else return { ...state, current: state.current + value };
     }
     case "Operation": {
-      if (state.prev.length == 0 && state.current.length == 0)
-        return { ...state };
+      if (state.prev.length == 0 && state.current.length == 0) return state;
       if (state.prev === "") {
         return {
           operation: value,
@@ -39,6 +38,8 @@ const reduceFun = (state, { type, value }) => {
       }
     }
     case "Equel": {
+      if (state.prev.length == 0 && state.current.length == 0) return state;
+
       return {
         final: Calculator(state),
         current: "",
@@ -52,7 +53,6 @@ const reduceFun = (state, { type, value }) => {
     case "del": {
       return { ...state, current: state.current.slice(0, -1) };
     }
-
     default:
       return state;
   }
@@ -81,6 +81,7 @@ function App() {
   const [state, dispatch] = useReducer(reduceFun, stateObject);
 
   useEffect(() => {
+    document.body.className = "";
     document.body.classList.add(themes[activeTheme]);
   }, [activeTheme]);
 
